@@ -1,0 +1,61 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black-color: #231d1d;
+    --white-color: #fff;
+    --skin-color: #955330;
+    --dark-color: #0B0C10;
+    --mid-color: #1F2833;
+    --light-color: #C5C6C7;
+}
+/* set base font size 10px as 1 rem ...default 1rem is 16px */
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: system-ui, 
+    -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", 
+    "Roboto", 
+    "Oxygen", 
+    "Ubuntu", 
+    "Cantarell", 
+    "Fira Sans", 
+    "Droid Sans", 
+    "Helvetica Neue", 
+    Arial, sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    background-color: var(--dark-color);
+    color: var(--mid-color);
+;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0.625rem;
+    color: var(--mid-color);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.5rem;
+}
+
+p{
+    margin-bottom: 1rem;
+}

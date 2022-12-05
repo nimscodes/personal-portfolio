@@ -32,6 +32,8 @@ body{
     line-height: 1.5;
     background-color: var(--white-color);
     color: var(--dark-color);
+    max-width: 1024px;
+    margin: 0 auto;
 ;
 }
 
@@ -74,7 +76,7 @@ header nav ul{
 }
 
 header nav a{
-    color: var(--skin-color);
+    color: var(--dark-color);
     text-decoration: none;
 }
 
@@ -86,7 +88,7 @@ header nav ul li{
 
 /* About */
 section{
-    width: 96%;
+    margin: 0px 5%;
     background-color: var(--white-color);
     color: var(--dark-color);
     margin: 2rem auto;
@@ -96,8 +98,8 @@ section{
 .flex-row{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 60vh;
+    height: 75vh;
+    min-height: 500px;
     /* border: 1px solid var(--black-color); */
     padding: 2rem;
 }
@@ -134,49 +136,85 @@ section{
 }
 
 .port-image img{
-    width: 80%;
+    width: 75%;
     height: 100%;
     border-radius: 50%;
 }
 
+button{
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid var(--skin-color);
+    color: var(--skin-color);
+    margin: 1rem 1rem;
+    padding: 0.25rem 1rem;
+}
+
+/* Work Section */
+.subheader{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.subheader h1{
+    display: inline-block;
+    border-bottom: 2.5px solid var(--skin-color);
+    margin: 6rem 0 2rem 0;
+}
+
 .grid-row{
     display: grid;
-    grid-template-rows: 300px 300px 300px;
+    margin: 0px 5%;
+    grid-template-rows: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-        "pro1  pro1  pro1"
-        "pro2 pro2 pro3"
-        "pro4 pro5 pro6"
+        "pro1 pro1 pro2"
+        "pro3 pro4 pro5"
     ;
-
-    width: 96%;
-    height: 1000px;
-    margin: 0 auto;
 }
 
 #pro1{
     grid-area: pro1;
-    background-color: red;
+    background-image: url("/assets/images/horiseon_top.png");
 }
 
 #pro2{
     grid-area: pro2;
-    background-color: lightblue;
+    background-image: url("/assets/images/horiseon_middle.png");
 }
 
 #pro3{
     grid-area: pro3;
-    background-color: lightcoral;
+    background-image: url("/assets/images/horiseon_bottom.png");
 }
 #pro4{
     grid-area: pro4;
-    background-color: yellow;
+    background-image: url("/assets/images/horiseon_middle.png");
 }
 #pro5{
     grid-area: pro5;
-    background-color: green;
+    background-image: url("/assets/images/horiseon_bottom.png");
 }
-#pro6{
-    grid-area: pro6;
-    background-color: blue;
+
+.card-column{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
 }
+
+.card-column h3{
+    width: 100%;
+    font-size: large;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white-color);
+}
+
+
+
+

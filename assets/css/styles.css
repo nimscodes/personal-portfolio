@@ -18,28 +18,27 @@ html{
 }
 
 body{
-    font-family: system-ui, 
-    -apple-system, BlinkMacSystemFont, 
-    "Segoe UI", 
-    "Roboto", 
-    "Oxygen", 
-    "Ubuntu", 
-    "Cantarell", 
-    "Fira Sans", 
-    "Droid Sans", 
-    "Helvetica Neue", 
-    Arial, sans-serif;
+    font-family: ui-monospace, 
+    Menlo, Monaco, 
+    "Cascadia Mono", "Segoe UI Mono", 
+    "Roboto Mono", 
+    "Oxygen Mono", 
+    "Ubuntu Monospace", 
+    "Source Code Pro",
+    "Fira Mono", 
+    "Droid Sans Mono", 
+    "Courier New", monospace;
     font-size: 1.75rem;
     line-height: 1.5;
-    background-color: var(--dark-color);
-    color: var(--mid-color);
+    background-color: var(--white-color);
+    color: var(--dark-color);
 ;
 }
 
 h1,h2,h3,h4,h5,h6{
     margin-bottom: 0.625rem;
-    color: var(--mid-color);
-    font-weight: 700;
+    color: var(--dark-color);
+    font-weight: 500;
     line-height: 1.1;
 }
 
@@ -58,4 +57,126 @@ h4{
 
 p{
     margin-bottom: 1rem;
+}
+
+/* Header */
+
+header{
+    text-align: center;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    padding: 2rem;
+    /* border: 1px solid var(--black-color); */
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav a{
+    color: var(--skin-color);
+    text-decoration: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 0 3rem;
+    font-size: 1.6rem;
+}
+
+/* About */
+section{
+    width: 96%;
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60vh;
+    /* border: 1px solid var(--black-color); */
+    padding: 2rem;
+}
+
+.desc{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-right: 2rem;
+    /* border: 1px solid var(--black-color); */
+
+}
+
+.desc .name{
+    font-size: 15rem;
+    padding: 0 2rem;
+    color: var(--skin-color);
+}
+
+.desc p {
+    font-size: 1.2rem;
+    padding: 0rem 4rem;
+}
+
+.port-image{
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid var(--black-color); */
+    display: flex;
+    justify-content: center;
+}
+
+.port-image img{
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.grid-row{
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "pro1  pro1  pro1"
+        "pro2 pro2 pro3"
+        "pro4 pro5 pro6"
+    ;
+
+    width: 96%;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+#pro1{
+    grid-area: pro1;
+    background-color: red;
+}
+
+#pro2{
+    grid-area: pro2;
+    background-color: lightblue;
+}
+
+#pro3{
+    grid-area: pro3;
+    background-color: lightcoral;
+}
+#pro4{
+    grid-area: pro4;
+    background-color: yellow;
+}
+#pro5{
+    grid-area: pro5;
+    background-color: green;
+}
+#pro6{
+    grid-area: pro6;
+    background-color: blue;
 }

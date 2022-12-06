@@ -192,25 +192,25 @@ button{
 
 #pro1{
     grid-area: pro1;
-    background-image: url("/assets/images/horiseon.png");
+    background-image: url("./assets/images/horiseon.png");
 }
 
 #pro2{
     grid-area: pro2;
-    background-image: url("/assets/images/psg.png");
+    background-image: url("./assets/images/psg.png");
 }
 
 #pro3{
     grid-area: pro3;
-    background-image: url("/assets/images/apptv.png");
+    background-image: url("./assets/images/apptv.png");
 }
 #pro4{
     grid-area: pro4;
-    background-image: url("/assets/images/spotmusic.png");
+    background-image: url("./assets/images/spotmusic.png");
 }
 #pro5{
     grid-area: pro5;
-    background-image: url("/assets/images/bbox.png");
+    background-image: url("./assets/images/bbox.png");
 }
 
 .card-column{

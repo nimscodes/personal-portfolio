@@ -57,9 +57,6 @@ h4{
     font-size: 2.5rem;
 }
 
-p{
-    margin-bottom: 1rem;
-}
 
 /* Header */
 
@@ -91,16 +88,17 @@ section{
     margin: 0px 5%;
     background-color: var(--white-color);
     color: var(--dark-color);
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     padding: 2rem;
 }
 
 .flex-row{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     height: 75vh;
     min-height: 500px;
-    /* border: 1px solid var(--black-color); */
+
     padding: 2rem;
 }
 
@@ -111,9 +109,6 @@ section{
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    margin-right: 2rem;
-    /* border: 1px solid var(--black-color); */
-
 }
 
 .desc .name{
@@ -124,15 +119,15 @@ section{
 
 .desc p {
     font-size: 1.2rem;
-    padding: 0rem 4rem;
+    padding: 0rem 3rem;
+    margin-bottom: 3rem;
 }
 
 .port-image{
     width: 40%;
     height: 100%;
-    /* border: 1px solid var(--black-color); */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .port-image img{
@@ -151,6 +146,30 @@ button{
     cursor: pointer;
 }
 
+.hello{
+    padding: 2rem;
+}
+
+@media screen and (max-width: 600px){
+    .flex-row{
+        flex-direction: column;
+    }
+
+    .desc{
+        width: 100%;
+        padding: 2rem;
+        border: 1px solid var(--black-color);
+    }
+
+    .port-image{
+        display: none;
+    }
+
+    section{
+        margin: 1rem auto;
+    }
+}
+
 /* Work Section */
 .subheader{
  display: flex;
@@ -166,7 +185,7 @@ button{
 
 .grid-row{
     display: grid;
-    margin: 0px 5%;
+    /* margin: 0px 5%; */
     grid-template-rows: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -207,7 +226,6 @@ button{
     display: grid;
     align-content: end;
     position: relative;
-    border: 3px solid var(--skin-color);
 }
 
 .card-column h3{
@@ -229,11 +247,25 @@ button{
     z-index: 1;
   }
 
+@media screen and (max-width: 600px) {
+    .grid-row{
+        grid-template-rows: repeat(5, 250px);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "pro1"
+        "pro2"
+        "pro3"
+        "pro4"
+        "pro5"
+        ;
+    }
+}
+
 
 /* Contact */
 .contact-row{
     display: flex;
-    margin: 0 5%;
+    /* margin: 0 5%; */
     justify-content: space-between;
 }
 
@@ -329,6 +361,17 @@ input[type=text], input[type=email], textarea {
     color: var(--light-color);
     background-color: rgb(27,27,27);
     cursor: pointer; 
+  }
+
+  @media screen and (max-width: 600px) {
+    .contact-row{
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info{
+        width: 96%;
+        margin-bottom: 1.5rem;
+    }
   }
   
 footer{

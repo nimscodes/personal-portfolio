@@ -40,7 +40,7 @@ body{
 h1,h2,h3,h4,h5,h6{
     margin-bottom: 0.625rem;
     color: var(--dark-color);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.1;
 }
 
@@ -57,9 +57,6 @@ h4{
     font-size: 2.5rem;
 }
 
-p{
-    margin-bottom: 1rem;
-}
 
 /* Header */
 
@@ -91,17 +88,15 @@ section{
     margin: 0px 5%;
     background-color: var(--white-color);
     color: var(--dark-color);
-    margin: 2rem auto;
     padding: 2rem;
 }
 
 .flex-row{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     height: 75vh;
     min-height: 500px;
-    /* border: 1px solid var(--black-color); */
-    padding: 2rem;
 }
 
 .desc{
@@ -111,9 +106,6 @@ section{
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    margin-right: 2rem;
-    /* border: 1px solid var(--black-color); */
-
 }
 
 .desc .name{
@@ -124,15 +116,15 @@ section{
 
 .desc p {
     font-size: 1.2rem;
-    padding: 0rem 4rem;
+    padding: 0rem 3rem;
+    margin-bottom: 3rem;
 }
 
 .port-image{
     width: 40%;
     height: 100%;
-    /* border: 1px solid var(--black-color); */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .port-image img{
@@ -147,7 +139,32 @@ button{
     border: 2px solid var(--skin-color);
     color: var(--skin-color);
     margin: 1rem 1rem;
-    padding: 0.25rem 1rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+}
+
+.hello{
+    padding: 2rem;
+}
+
+@media screen and (max-width: 600px){
+    .flex-row{
+        flex-direction: column;
+    }
+
+    .desc{
+        width: 100%;
+        padding: 2rem;
+        border: 1px solid var(--black-color);
+    }
+
+    .port-image{
+        display: none;
+    }
+
+    section{
+        margin: 1rem auto;
+    }
 }
 
 /* Work Section */
@@ -165,7 +182,6 @@ button{
 
 .grid-row{
     display: grid;
-    margin: 0px 5%;
     grid-template-rows: 250px 250px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -176,25 +192,25 @@ button{
 
 #pro1{
     grid-area: pro1;
-    background-image: url("/assets/images/horiseon_top.png");
+    background-image: url("/assets/images/horiseon.png");
 }
 
 #pro2{
     grid-area: pro2;
-    background-image: url("/assets/images/horiseon_middle.png");
+    background-image: url("/assets/images/psg.png");
 }
 
 #pro3{
     grid-area: pro3;
-    background-image: url("/assets/images/horiseon_bottom.png");
+    background-image: url("/assets/images/apptv.png");
 }
 #pro4{
     grid-area: pro4;
-    background-image: url("/assets/images/horiseon_middle.png");
+    background-image: url("/assets/images/spotmusic.png");
 }
 #pro5{
     grid-area: pro5;
-    background-image: url("/assets/images/horiseon_bottom.png");
+    background-image: url("/assets/images/bbox.png");
 }
 
 .card-column{
@@ -205,16 +221,157 @@ button{
     cursor: pointer;
     display: grid;
     align-content: end;
+    position: relative;
 }
 
 .card-column h3{
     width: 100%;
     font-size: large;
     padding: 1rem 2rem;
+    margin-bottom: -5px;
     background-color: rgba(0, 0, 0, 0.7);
     color: var(--white-color);
+    text-transform: lowercase;
+}
+
+.card-column .link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+@media screen and (max-width: 600px) {
+    .grid-row{
+        grid-template-rows: repeat(5, 250px);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "pro1"
+        "pro2"
+        "pro3"
+        "pro4"
+        "pro5"
+        ;
+    }
 }
 
 
+/* Contact */
+.contact-row{
+    display: flex;
+    justify-content: space-between;
+}
 
+.contact-form{
+    width: 45%;  
+}
 
+.contact-form button{
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%; 
+    padding: 1rem; 
+    border: 1px solid var(--skin-color); 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 0.6rem; 
+    margin-bottom: 1.2rem;
+    resize: vertical;
+  }
+
+  .contact-info{
+    width: 45%;
+  }
+
+  .contact-list {
+    list-style-type: none;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .list-item {
+    line-height: 4;
+    color: var(--skin-color)
+  }
+  
+  .contact-text {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    color: var(--dark-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contact-text a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact-text a:hover {
+    color: var(--skin-color);
+    text-decoration: none;
+  }
+  
+  
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: -5rem;
+    padding: 0;
+  }
+  
+  .social-media-list li a {
+    color: var(--white-color);
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: var(--light-color);
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+  }
+
+  @media screen and (max-width: 600px) {
+    .contact-row{
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info{
+        width: 96%;
+        margin-bottom: 2rem;
+    }
+  }
+  
+footer{
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+    opacity: .5;
+}

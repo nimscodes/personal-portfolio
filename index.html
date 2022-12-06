@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Portfolio</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <a href="">
+                <a href="#about">
                     <li>about</li>
-                </a><a href="">
+                </a><a href="#work">
                     <li>work</li>
-                </a><a href="">
+                </a><a href="#contact">
                     <li>contact</li>
                 </a>
             </ul>
@@ -46,23 +47,79 @@
         <section id="work">
             <div class="grid-row">
                 <div id="pro1" class="card-column">
-                    <h3>Project Uno</h3>
+                    <h3>Refactor</h3>
+                    <a href="https://nimscodes.github.io/project-refactor/" target="_blank">
+                        <span class="link"></span>
+                    </a>
                 </div>
                 <div id="pro2" class="card-column">
-                    <h3>Project Deux</h3>
+                    <h3>Pre Study Guide</h3>
+                    <a href="https://nimscodes.github.io/prework-study-guide/" target="_blank">
+                        <span class="link"></span>
+                    </a>
                 </div>
                 <div id="pro3" class="card-column">
-                   <h3>Project Trio</h3>
+                   <h3>App TV</h3>
+                   <a href="https://tv.apple.com/" target="_blank">
+                    <span class="link"></span>
+                  </a>
                 </div>
                 <div id="pro4" class="card-column">
-                    <h3>Project Quartz</h3>
+                    <h3>Spot Music</h3>
+                    <a href="https://open.spotify.com/" target="_blank">
+                        <span class="link"></span>
+                    </a>
                 </div>
                 <div id="pro5" class="card-column">
-                    <h3>Cinq</h3>
+                    <h3>Blackbox</h3>
+                    <a href="https://www.useblackbox.io/" target="_blank">
+                        <span class="link"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="subheader">
+            <h1>get in touch</h1>
+        </div>
+        <section id="contact">
+            <div class="contact-row">
+                <div class="contact-form">
+                    <form action="action_page.php">
+                        <input type="text"  name="name" placeholder="name">
+                        <input type="email"  name="email" placeholder="e-mail">
+                        <textarea name="subject" placeholder="message" style="height:150px"></textarea>
+                        <button>send</button>
+                </div>
+                <div class="contact-info">
+                    <ul class="contact-list">
+                        <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">leicester, uk</span></i></li>
+                        
+                        <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:+44 (0)7342 54545" title="Give me a call">44 (0)7342 54545</a></span></i></li>
+                        
+                        <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">panteck@gmail.com</a></span></i></li>
+                        
+                      </ul>
+              
+                      <ul class="social-media-list">
+                        <li><a href="https://github.com/nimscodes" target="_blank" class="contact-icon">
+                          <i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                          <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                          <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="contact-icon">
+                          <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>       
+                      </ul>
                 </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        @copyright: made by nimscode
+    </footer>
 </body>
 </html>

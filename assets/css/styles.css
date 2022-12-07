@@ -137,8 +137,8 @@ button{
     border-radius: 3px;
     border: 2px solid var(--skin-color);
     color: var(--skin-color);
-    margin: 1rem 1rem;
-    padding: 1rem 1rem;
+    margin: 1rem;
+    padding: 1rem;
     cursor: pointer;
 }
 
